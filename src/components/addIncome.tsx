@@ -1,18 +1,37 @@
-import React, { useContext } from "react";
-import { FinanceContext } from "../context/financeContext";
+// AddIncome.js
+import React, { useState, useContext } from "react";
+import { FinanceContext } from "../context/FinanceContext";
 
-const AddIncome = () => {
+function AddIncome() {
+  const [amount, setAmount] = useState("");
   const { addIncome } = useContext(FinanceContext);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const value = parseFloat(amount);
+    if (!isNaN(value) && value > 0) {
+      addIncome(value);
+      setAmount("");
+    }
+  };
+
   return (
-    <button
-      onClick={() => addIncome(100)}
-      className="btn bg-green-500 text-white hover:bg-green-600 transition-colors py-2 px-4 rounded flex items-center"
-    >
-      <i className="fas fa-sync-alt mr-3"></i>
-      <span>Add Income</span>
-    </button>
+    <form onSubmit={handleSubmit} className="mt-4">
+      <input
+        type="number"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+        placeholder="Enter income"
+        className="border rounded px-3 py-2 mr-2"
+      />
+      <button
+        type="submit"
+        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+      >
+        Add Income
+      </button>
+    </form>
   );
-};
+}
 
 export default AddIncome;
