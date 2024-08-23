@@ -4,13 +4,9 @@ import { FinanceProvider } from "../context/FinanceContext";
 
 function AccountOverview() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-sky-400 to-green-300 p-8">
-      {" "}
-      {/* Gradient background from sky blue to light green */}
-      <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
-        {" "}
-        {/* White background for the cards container */}
-        <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
+    <div className="bg-gradient-to-r from-yellow-100 via-orange-100 to-green-100 min-h-screen p-6 flex justify-center items-center">
+      <div className="w-full max-w-4xl bg-white rounded-lg shadow-xl p-8">
+        <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">
           Account Overview
         </h1>
         <FinanceProvider>

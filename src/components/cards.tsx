@@ -15,9 +15,9 @@ function Cards() {
   } = useContext(FinanceContext);
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  const [balanceInput, setBalanceInput] = useState(0);
-  const [incomeInput, setIncomeInput] = useState(0);
-  const [expenseInput, setExpenseInput] = useState(0);
+  const [balanceInput, setBalanceInput] = useState(1000);
+  const [incomeInput, setIncomeInput] = useState(1000);
+  const [expenseInput, setExpenseInput] = useState(1000);
 
   useEffect(() => {
     const intervalId = setInterval(() => {

@@ -9,7 +9,7 @@ function Auth() {
   const [confirmPassword, setConfirmPassword] = React.useState("");
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-yellow-100 via-orange-100 to-green-100">
       <div className="bg-white p-4 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">
           Sign up on <span className="text-green-500">MyFinanceFlow</span>
@@ -67,7 +67,7 @@ function Auth() {
           >
             Sign up with email and password
           </button>
-          <p className="font-bold mb-20 text-center text-gray-800">Or</p>
+          <p className="font-bold mb- text-center text-gray-800">Or</p>
           <button
             type="button"
             className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"

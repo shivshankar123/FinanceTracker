@@ -1,10 +1,9 @@
-// AddExpense.js
-import React, { useState, useContext } from "react";
-import { FinanceContext } from "../context/FinanceContext";
+import React, { useState } from "react";
+import { useFinanceContext } from "../context/FinanceContext";
 
 function AddExpense() {
   const [amount, setAmount] = useState("");
-  const { addExpense } = useContext(FinanceContext);
+  const { addExpense } = useFinanceContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
